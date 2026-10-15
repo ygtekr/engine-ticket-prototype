@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0f14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>MD Bilet – Makine Dairesi Arıza & Bakım</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="./icons/icon.svg" alt=""><span>MD Bilet</span></div>
+  <button id="syncPill" class="sync-pill" onclick="location.hash='#/senkron'"></button>
+</header>
+<div class="rolebar">
+  <label for="roleSel">Rol:</label>
+  <select id="roleSel"></select>
+</div>
+<main id="view"></main>
+<nav class="bottomnav">
+  <a href="#/" data-nav="biletler"><span class="ico">📋</span>Biletler</a>
+  <a href="#/ekipman" data-nav="ekipman"><span class="ico">🌳</span>Ekipman</a>
+  <a href="#/tara" data-nav="tara" class="scan"><span class="ico">⌗</span>QR Tara</a>
+  <a href="#/stok" data-nav="stok"><span class="ico">📦</span>Stok</a>
+  <a href="#/senkron" data-nav="senkron"><span class="ico">⇅</span>Senkron</a>
+</nav>
+<div id="toast" class="toast" hidden></div>
+<div id="modal" class="modal" hidden><div class="modal-card" id="modalCard"></div></div>
+<script src="./vendor/qrcode-generator.js"></script>
+<script src="./vendor/html5-qrcode.min.js"></script>
+<script src="./seed.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
